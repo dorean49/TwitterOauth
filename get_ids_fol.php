@@ -1,5 +1,5 @@
 <?php
-#unlimited time
+# unlimited time
 set_time_limit(0);
 
 # include the twitteroauth library
@@ -10,25 +10,22 @@ require_once('/home/twitteroauth/twitteroauth.php');
 */
 class get_follower_ids{
 	
-	#assign variale
+	# assign variale
 	protected $CONSUMER_KEY 	='ADD YOUR CONSUMER KEY';
 	protected $CONSUMER_SECRET 	='ADD YOUR CONSUMER SCREET';
 	protected $ACCESS_TOKEN		= 'ADD YOUR ACCESS TOKEN';
 	protected $ACCESS_TOKEN_SECRET 	= 'ADD YOUR ACCESS TOKEN SECRET';
 	protected $FORMAT_FILE		= 'txt';
-	protected $DEST_FILE		= '/HOME/DATA/';
+	protected $DEST_FILE		= '/home/user/';
 	protected $SCREEN_NAME		= 'SCREEN_NAME_TWITTER';
 
 	/**
 	* object to array
 	*/
-	public function object_to_array($data)
-	{HOME
-	    if (is_array($data) || is_object($data))
-	    {
+	public function object_to_array($data){
+	    if (is_array($data) || is_object($data)){
 		$result = array();
-		foreach ($data as $key => $value)
-		{
+		foreach ($data as $key => $value){
 		    $result[$key] = $this->object_to_array($value);
 		}
 		return $result;
